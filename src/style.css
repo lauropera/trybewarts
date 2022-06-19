@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  flex-direction: column;
+  font-family: Palanquin Dark, sans-serif;
+  min-height: 100vh;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+#btn-box {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn {
+  background-color: rgb(50, 167, 145);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  opacity: 1;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+#comment-area {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+#evaluation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  width: 100%;
+}
+
+#family {
+  flex-direction: column;
+}
+
+.family-radio {
+  margin: 4px;
+}
+
+.flex {
+  display: flex;
+  gap: 8px;
+}
+
+form {
+  display: flex;
+}
+
+.formulary-trybewarts , .container {
+  display: flex;
+  width: 100%;
+}
+
+.footer {
+  align-items: center;
+  background-color: rgb(60, 64, 74);
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.header {
+  align-items: center;
+  background-color: rgb(78, 44, 131);
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  width: 100%;
+}
+
+.informations {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 6px;
+}
+
+.informations div {
+  display: flex;
+  gap: 6px;
+  width: 90%;
+}
+
+.tech-checkbox label {
+  min-width: 90px;
+}
+
+.informations div label {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+}
+
+.inputs {
+  padding: 8px;
+  width: 100%;
+}
+
+input:focus {
+  outline-color: rgb(50, 167, 145);
+}
+
+main {
+  display: flex;
+  flex: 1;
+}
+
+.rate-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.trybewarts-login input {
+  border: none;
+  border-radius: 2px;
+  padding: 6px;
+}
+
+.rate-inputs label input {
+  margin: 4px;
+}
+
+#submit {
+  border-radius: 2px;
+}
+
+#submit-btn {
+  width: 50%;
+}
+
+.subject {
+  margin: 4px;
+}
+
+#textarea {
+  max-width: 80%;
+  height: 100px;
+  padding: 8px;
+  resize: none;
+}
+
+#textarea:focus {
+  outline-color: rgb(50, 167, 145);
+}
+
+.tech-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.trybewarts-login {
+  flex-direction: column;
+  gap: 4px;
+}
+
+#trybewarts-forms-logo {
+  display: none;
+}
+
+.trybewarts-header-logo {
+  width: 70px;
+}
+
+@media screen and ( max-width : 480px ) {
+
+  #btn-mobile {
+    display: block;
+  }
+
+  .header {
+    justify-content: space-between;
+    padding: 8px;
+  }
+
+  .informations div:nth-child( 2 ) {
+    gap: 16px;
+  }
+
+  .login {
+    visibility: hidden;
+  }
+
+  #nav {
+    display: flex;
+  }
+
+  .trybewarts-login {
+    position: absolute;
+    width: 50%;
+    top: 88px;
+    right: 0;
+    height: 0;
+    transition: 220ms;
+    overflow-y: hidden;
+    padding: 8px;
+    background-color: rgb(78, 44, 131);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  #nav.active .login .trybewarts-login {
+    height: 110px;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tech-checkbox {
+    column-gap: 36px;
+  }
+}
+
+@media screen and ( min-width : 481px ) {
+
+  .content {
+    flex-direction: row;
+  }
+
+  .informations div:nth-child( 2 ) {
+    gap: 14px;
+  }
+
+  .header {
+    justify-content: space-between;
+    padding: 12px;
+  }
+
+  .tech-checkbox {
+    column-gap: 40px;
+  }
+}
+
+@media screen and ( min-width : 801px ) {
+
+  #evaluation-form {
+    width: 675px;
+  }
+
+  form {
+    padding: 12px;
+  }
+
+  .formulary-trybewarts {
+    justify-content: space-evenly;
+  }
+
+  .informations div {
+    width: 100%;
+  }
+
+  #logo {
+    display: flex;
+    align-items: center;
+  }
+
+  #trybewarts-forms-logo {
+    display: block;
+    height: 500px;
+    width: 100%;
+  }
+
+  .trybewarts-login {
+    gap: 6px;
+    flex-direction: row;
+  }
+}
